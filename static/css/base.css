@@ -11,3 +11,9 @@
 .navbar{
     background-color: rgba(139, 139, 247, 0.918);
 }
+.second{
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/20/05/29/graphic-designer-4562741_960_720.png');
+    height:550px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
