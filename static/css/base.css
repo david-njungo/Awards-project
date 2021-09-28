@@ -1,0 +1,10 @@
+.first{
+    background-image: url('https://cdn.pixabay.com/photo/2016/09/21/11/24/carousel-1684591_960_720.png');
+    height:550px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.intro{
+    font-size: 50px;
+    font-weight: 900; 
+}
