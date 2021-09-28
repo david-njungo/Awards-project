@@ -10,4 +10,7 @@ class Projects(models.Model):
     def __str__(self):
        return self.title
     class Meta:
-        ordering = ['title']    
+        ordering = ['title'] 
+
+    def save_project(self):
+        self.save()   

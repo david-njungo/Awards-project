@@ -10,3 +10,9 @@ class ProjectsTestClass(TestCase):
     # Testing  instance
     def test_instance(self):
         self.assertTrue(isinstance(self.delani,Projects))
+    
+     # Testing Save Method
+    def test_save_method(self):
+        self.delani.save_project()
+        projects = Projects.objects.all()
+        self.assertTrue(len(projects) > 0)
