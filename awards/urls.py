@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.contrib.auth.views import LogoutView
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('accounts/', include('registration.backends.simple.urls')),
     path('tinymce/', include('tinymce.urls')),
     path('logout/', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
+    path('api-token-auth/', obtain_auth_token)
 ]
