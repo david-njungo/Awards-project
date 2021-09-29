@@ -1,7 +1,11 @@
 from django.shortcuts import render,redirect,reverse
-from .models import Projects
+from .models import Projects,Profile
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import ProfileSerializer,ProjectsSerializer
+from rest_framework import status
 
 # Create your views here.
 
@@ -36,3 +40,15 @@ def profile_page(request):
     else:
         form = ProfileForm()
     return render(request, 'profile.html', {"form": form})
+
+class ProfileList(APIView):
+    def get(self,request,format=None):
+        all_profiles = Profile.objects.all()
+        serializers = ProfileSerializer(all_profiles,many=True)
+        return Response(serializers.data)
+
+class ProjectsList(APIView):
+    def get(self,request,format=None):
+        all_projects = Projects.objects.all()
+        serializers = ProjectsSerializer(all_projects,many=True)
+        return Response(serializers.data)
