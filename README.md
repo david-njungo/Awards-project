@@ -18,3 +18,16 @@ $ git clone https://github.com/david-njungo/Awards-project.git
 * Open  the project on VS Code/ your editor of choice
 ## Live Demo
 open the project  
+## Known Bugs
+No known bugs yet.
+## Technologies Used
+Languages used are purely;
+* HTML
+* CSS 
+* PYTHON
+* Django framework
+## Support and contact details
+If you would like to reach me,contact me through email at davidnjungo3@gmail.com
+### License
+[MIT LICENSE](https://choosealicense.com/licenses/mit/)
+Copyright (c) {2021} **David Njungo**
