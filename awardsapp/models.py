@@ -2,9 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Projects(models.Model):
-    title = models.CharField(max_length =30)
-    link = models.CharField(max_length =30)
-    description = models.CharField(max_length =30)
+    title = models.CharField(max_length =50)
+    link = models.CharField(max_length =50)
+    description = models.CharField(max_length =150)
+    image = models.ImageField(upload_to = 'images/')
     # Rates
     # user
     def __str__(self):
