@@ -13,4 +13,8 @@ class Projects(models.Model):
         ordering = ['title'] 
 
     def save_project(self):
-        self.save()   
+        self.save() 
+    @classmethod  
+    def get_project(cls):
+        projects = cls.objects.all()
+        return projects

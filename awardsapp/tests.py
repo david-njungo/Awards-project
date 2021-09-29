@@ -16,3 +16,10 @@ class ProjectsTestClass(TestCase):
         self.delani.save_project()
         projects = Projects.objects.all()
         self.assertTrue(len(projects) > 0)
+
+    def tearDown(self):
+        Projects.objects.all().delete()
+
+    def test_get_projects(self):
+        get_projects = Projects.get_project()
+        self.assertTrue(len(get_projects)==0)
