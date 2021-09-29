@@ -49,7 +49,7 @@
 <div class="projects">
     <h1 class="text-center text-dark fw-bold">PROJECTS</h1>
         {% for project in projects %}
-        <div class="row"></div>
+        <div class="row">
         <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card" style="width: 18rem;">
                 <img src="{{project.image.url}}" class="img-responsive" class="card-img-top" alt="...">
@@ -59,6 +59,7 @@
                     <a href="{{project.link}}" class="btn btn-primary">{{project.link}}</a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     </div>

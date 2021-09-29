@@ -32,15 +32,15 @@ class Projects(models.Model):
 
 class Profile(models.Model):
     prof_photo = models.ImageField(upload_to = 'profile/')
-    bio = HTMLField
+    bio = models.CharField(max_length=150,blank=True)
     contact = models.CharField(max_length=60,blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.username
 
-    @receiver(post_save, sender=User)
-    def update_profile_signal(sender, instance, created, **kwargs):
-        if created:
-            Profile.objects.create(user=instance)
-        instance.profile.save()
+    # @receiver(post_save, sender=User)
+    # def update_profile_signal(sender, instance, created, **kwargs):
+    #     if created:
+    #         Profile.objects.create(user=instance)
+    #     instance.profile.save()

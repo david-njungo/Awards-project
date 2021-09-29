@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,reverse
 from .models import Projects
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm
 
 # Create your views here.
-@login_required(login_url='/accounts/login/')
+
 def home(request):
     # projects = Projects.get_project()
     projects = Projects.objects.all()
@@ -31,7 +31,7 @@ def profile_page(request):
         form = ProfileForm(request.POST, request.FILES)
         if form.is_valid():
             form.save(commit=False)          
-        return redirect('profile_page')
+        return redirect('myprofile')
 
     else:
         form = ProfileForm()
