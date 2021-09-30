@@ -17,7 +17,7 @@ $ git clone https://github.com/david-njungo/Awards-project.git
 ```
 * Open  the project on VS Code/ your editor of choice
 ## Live Demo
-open the project  
+open the project   https://awards2021.herokuapp.com/
 ## Known Bugs
 No known bugs yet.
 ## Technologies Used
